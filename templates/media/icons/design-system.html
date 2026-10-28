@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>NOVA PLAY — макет и стайлгайд</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 32px;
+        background: #0d1117;
+        color: #f5f6fa;
+        font:
+          16px/1.5 Inter,
+          sans-serif;
+      }
+      h1,
+      h2 {
+        font-family: Orbitron, sans-serif;
+      }
+      h2 {
+        color: #00d4a3;
+        margin-top: 40px;
+      }
+      .row,
+      .gal {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+      }
+      .sw {
+        width: 140px;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #1a1f2b;
+      }
+      .sw i {
+        display: block;
+        height: 64px;
+      }
+      .sw p {
+        margin: 8px;
+        font-size: 13px;
+      }
+      img {
+        border-radius: 8px;
+        max-width: 100%;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        border: 1px solid #1a1f2b;
+        padding: 8px 12px;
+        text-align: left;
+      }
+      .wf {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+      .wf div {
+        background: #1a1f2b;
+        border: 1px dashed #a3a8b3;
+        border-radius: 8px;
+        padding: 12px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="logo/logo.svg" height="48" alt="NOVA PLAY" />
+    <h1>Макет и медиа — NOVA PLAY</h1>
+    <p>Интернет-магазин компьютерных игр. Тёмная тема по умолчанию.</p>
+    <h2>Цвета</h2>
+    <div class="row">
+      <div class="sw">
+        <i style="background: #0d1117"></i>
+        <p>#0D1117<br />фон (тёмная тема)</p>
+      </div>
+      <div class="sw">
+        <i style="background: #1a1f2b"></i>
+        <p>#1A1F2B<br />карточки, подвал</p>
+      </div>
+      <div class="sw">
+        <i style="background: #2e7bff"></i>
+        <p>#2E7BFF<br />акцент, кнопки</p>
+      </div>
+      <div class="sw">
+        <i style="background: #00d4a3"></i>
+        <p>#00D4A3<br />иконки, цена</p>
+      </div>
+      <div class="sw">
+        <i style="background: #ff6b6b"></i>
+        <p>#FF6B6B<br />скидки, ошибки</p>
+      </div>
+      <div class="sw">
+        <i style="background: #f5f6fa"></i>
+        <p>#F5F6FA<br />текст / фон (светлая)</p>
+      </div>
+      <div class="sw">
+        <i style="background: #a3a8b3"></i>
+        <p>#A3A8B3<br />второстепенный текст</p>
+      </div>
+    </div>
+    <h2>Шрифты</h2>
+    <p style="font-family: Orbitron; font-size: 32px; margin: 0">
+      Orbitron — заголовки и логотип
+    </p>
+    <p>
+      Inter — основной текст. Подключение: Google Fonts (лицензия OFL) или
+      локально через @font-face.
+    </p>
+    <h2>Темы (CSS-переменные)</h2>
+    <table>
+      <tr>
+        <th>Переменная</th>
+        <th>Тёмная</th>
+        <th>Светлая</th>
+      </tr>
+      <tr>
+        <td>--color-bg</td>
+        <td>#0D1117</td>
+        <td>#F5F6FA</td>
+      </tr>
+      <tr>
+        <td>--color-surface</td>
+        <td>#1A1F2B</td>
+        <td>#FFFFFF</td>
+      </tr>
+      <tr>
+        <td>--color-text</td>
+        <td>#F5F6FA</td>
+        <td>#0D1117</td>
+      </tr>
+      <tr>
+        <td>--color-muted</td>
+        <td>#A3A8B3</td>
+        <td>#A3A8B3 (на светлом — крупный текст) или #1A1F2B</td>
+      </tr>
+      <tr>
+        <td>логотип</td>
+        <td>logo.svg</td>
+        <td>logo-light.svg</td>
+      </tr>
+    </table>
+    <h2>Логотип и иконки</h2>
+    <div class="gal">
+      <img src="logo/logo.svg" height="48" alt="" /><img
+        src="logo/logo-mark.svg"
+        height="48"
+        alt=""
+      /><img src="icons/shield.svg" alt="" /><img
+        src="icons/bolt.svg"
+        alt=""
+      /><img src="icons/support.svg" alt="" /><img
+        src="icons/discount.svg"
+        alt=""
+      />
+    </div>
+    <h2>Слайдер (1200×500)</h2>
+    <div class="gal">
+      <img src="images/slider/slide-1.svg" width="380" alt="" /><img
+        src="images/slider/slide-2.svg"
+        width="380"
+        alt=""
+      /><img src="images/slider/slide-3.svg" width="380" alt="" />
+    </div>
+    <h2>Карточки игр (400×500)</h2>
+    <div class="gal">
+      <img src="images/games/game-1.svg" width="150" alt="" /><img
+        src="images/games/game-2.svg"
+        width="150"
+        alt=""
+      /><img src="images/games/game-3.svg" width="150" alt="" /><img
+        src="images/games/game-4.svg"
+        width="150"
+        alt=""
+      /><img src="images/games/game-5.svg" width="150" alt="" />
+    </div>
+    <h2>Партнёры</h2>
+    <div class="gal">
+      <img src="images/partners/partner-1.svg" alt="" /><img
+        src="images/partners/partner-2.svg"
+        alt=""
+      /><img src="images/partners/partner-3.svg" alt="" />
+    </div>
+    <h2>Схема макета по ширинам</h2>
+    <div class="wf">
+      <div>
+        <b>360 px</b><br />Шапка: лого + бургер · слайдер на всю ширину ·
+        преимущества 1 колонка · игры 1 колонка · партнёры в столбец · подвал в
+        столбец · каталог: кнопка «Фильтр»
+      </div>
+      <div>
+        <b>768 px</b><br />Шапка: лого + бургер · преимущества 2×2 · игры 2–3
+        колонки · партнёры в ряд · подвал в 2 колонки · каталог: кнопка
+        «Фильтр», 2–3 колонки
+      </div>
+      <div>
+        <b>1920 px</b><br />Шапка: лого + полное меню + переключатель темы ·
+        контейнер max-width ≈1280 px · преимущества 4 в ряд · игры 5 в ряд ·
+        подвал в 3 колонки · каталог: сайдбар жанров + 4 колонки
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <img src="./media/logo/logo.svg" alt="" id="logo" />
+      <div id="menu"></div>
+      <div id="" burger></div>
+    </header>
+
+    <div class="slider-container">
+      <div class="slider-track" id="slider-track">
+        <div class="slide">
+          <img src="./media/images/games/game-1.svg" alt="" />
+
+          <div id="info">
+            <h1 id="title"></h1>
+            <h2 id="price"></h2>
+            <button id="more_btn">подробнее</button>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="./media/images/games/game-2.svg" alt="" />
+          <div>
+            <h1 id="title">игра 1</h1>
+            <h2 id="price">1000</h2>
+            <button id="more_btn">подробнее</button>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="./media/images/games/game-3.svg" alt="" />
+
+          <div>
+            <h1 id="title">игра 2</h1>
+            <h2 id="price">2000</h2>
+            <button id="more_btn">подробнее</button>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="./media/images/games/game-4.svg" alt="" />
+          <div>
+            <h1 id="title">игра 3</h1>
+            <h2 id="price">3000</h2>
+            <button id="more_btn">подробнее</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="advantages">
+      <div class="punkt">
+        <img src="./media/icons/bolt.svg" height="48" alt="" />
+        <h3>Быстро</h3>
+      </div>
+      <div class="punkt">
+        <img src="./media/icons/discount.svg" height="48" alt="" />
+        <h3>Дешево</h3>
+      </div>
+      <div class="punkt">
+        <img src="./media/icons/shield.svg" height="48" alt="" />
+        <h3>Безопасно</h3>
+      </div>
+      <div class="punkt">
+        <img src="./media/icons/support.svg" height="48" alt="" />
+        <h3>Поможем если что то не так</h3>
+      </div>
+    </div>
+
+    <script>
+      const track = document.getElementById("slider-track");
+      const slides = document.querySelectorAll(".slide");
+
+      let currentIndex = 0;
+
+      function getSlideWidth() {
+        return slides[0].offsetWidth;
+      }
+
+      function nextSlide() {
+        currentIndex++;
+        if (currentIndex >= slides.length) {
+          currentIndex = 0;
+        }
+        updateSlider();
+      }
+
+      function updateSlider() {
+        const slideWidth = getSlideWidth();
+        track.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+      }
+
+      window.onload = function () {
+        updateSlider();
+        setInterval(nextSlide, 3000);
+      };
+
+      window.onresize = updateSlider;
+    </script>
+  </body>
+</html>
