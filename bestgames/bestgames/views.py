@@ -4,7 +4,8 @@ from games.models import Game
 
 @login_required
 def index(request):
-    games = Game.objects.select_related('games').all()
+    games = Game.objects.all()
+
 
     return render(request, 'index.html', {
         'games': games,

@@ -10,8 +10,8 @@ def register_view(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'регистрация прошла успешно')
-            return redirect('accounts:login')
+            return redirect('login') 
     else:
         form = RegisterForm()
-    return render(request, 'accounts/register.html', {'form': form})
+    return render(request, 'registration/register.html', {'form': form})
 

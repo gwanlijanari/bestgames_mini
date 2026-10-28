@@ -9,7 +9,7 @@ class UserManager(BaseUserManager):
             raise ValueError("Password is required")
 
         user = self.model(
-            username=User.normalize_username(username),
+            username=self.model.normalize_username(username),
             **extra_fields
         )
 
@@ -44,5 +44,6 @@ class User(AbstractBaseUser, PermissionsMixin):
         verbose_name_plural = "Аккаунты"
 
     def __str__(self):
-        role = "админ" if self.is_superuser else "учитель" if self.is_staff else "студент"
-        return f'{self.username} ({role})'
+        if self.is_superuser:
+            return f'{self.username} (админ)'
+        return self.username

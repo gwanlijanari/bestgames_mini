@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'games'
+    'games',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -132,4 +133,9 @@ MAILERS = {
     },
 }
 
-LOGIN_REDIRECT_URL = 'index'
+
+AUTH_USER_MODEL = 'users.User'
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = 'login'
+
