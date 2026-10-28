@@ -13,15 +13,14 @@
 
     <div class="login">
     <h1>Вход</h1>
-    <!-- {% if form.errors %}
+    {% if form.errors %}
         <p>Неверный логин или пароль</p>
-    {% endif %} -->
+    {% endif %}
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Войти</button>
     </form>
-    <p>нет аккаунта? <a href="{% url 'accounts:register' %}">Зарегистрироваться</a></p>
     </main>
 </div>
 </body>
