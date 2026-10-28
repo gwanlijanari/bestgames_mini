@@ -1,9 +1,10 @@
 * {
   box-sizing: border-box;
-  color: white;
+
 }
 
 body {
+color: white;
   gap: 30px;
   background-color: #0d1117;
   display: flex;
@@ -47,7 +48,7 @@ header {
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
-  background-color: red;
+
 }
 
 
@@ -79,9 +80,10 @@ justify-content: space-evenly;
   display: flex;
   justify-content: center;
   align-items: center;
-
+color: #000;
 }
 main {
+  color: white;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -94,4 +96,12 @@ main {
   justify-content: center;
   width: auto;
   margin: 30px;
+color: #000;
+}
+form {
+  color: #ffffff;
+}
+
+#white_h1{
+  color: white;
 }
